@@ -5655,11 +5655,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Visi\\source\\repos\\ChatASP\\ChatASP\\ChatASP.csproj",
+      "projectUniqueName": "C:\\Users\\Visi\\Desktop\\CH\\ChatASP.csproj",
       "projectName": "ChatASP",
-      "projectPath": "C:\\Users\\Visi\\source\\repos\\ChatASP\\ChatASP\\ChatASP.csproj",
+      "projectPath": "C:\\Users\\Visi\\Desktop\\CH\\ChatASP.csproj",
       "packagesPath": "C:\\Users\\Visi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Visi\\source\\repos\\ChatASP\\ChatASP\\obj\\",
+      "outputPath": "C:\\Users\\Visi\\Desktop\\CH\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Visi\\AppData\\Roaming\\NuGet\\NuGet.Config",

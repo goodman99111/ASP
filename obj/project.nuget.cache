@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XUs1Ahg1syy+8PDdbrWamHAmKuwmfy9RWoUVos9JinK/I9oowC0BDOakU4Mr5oRA91S+Nwer77tEwV+A7s7mtw==",
+  "dgSpecHash": "O5/e2NvZaPdSzsxUgoDfTMrgGgOw/mhOi6/dzPSSIC30nvVcyxTLEHKQzQHsAC+qie2JmtEejg5qNtZR3iIsEg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Visi\\source\\repos\\ChatASP\\ChatASP\\ChatASP.csproj",
+  "projectFilePath": "C:\\Users\\Visi\\Desktop\\CH\\ChatASP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Visi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Visi\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
