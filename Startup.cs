@@ -37,6 +37,7 @@ namespace ChatASP
                 });
 
             services.AddControllersWithViews();
+            services.AddSignalR();
 
         }
 
@@ -55,7 +56,7 @@ namespace ChatASP
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            
             app.UseRouting();
 
             app.UseAuthentication();    // аутентификация
@@ -66,6 +67,7 @@ namespace ChatASP
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapHub<MainHub>("/Index");
             });
         }
     }

@@ -1,7 +1,49 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<link rel="stylesheet" href="~/css/main.css" />
+<link rel="stylesheet" href="~/css/MessageStyle.css" />
 
-<div class="spinner-border">
+
+<div class="chat-list">
+
+</div>
+<div class="area-chat" style="height:500px; overflow-y: auto;">
+    <div class="message border border-primary rounded">
+        <p>sdfhnvhsbvhasnk</p>
+    </div><br />
     
 </div>
+<div id="chat-area" class="chat-textarea">
+    <textarea id="input-area" style="border: 1px solid #ba68c8;height: 80%;" class="form-control"></textarea>
+    <button style="height: 80%;" class="btn btn-dark" id="send-but" type="button"><svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+</svg></button>
+</div>
+
+
+<script src="js/signalr/dist/browser/signalr.min.js"></script>
+<script>
+    const hubConnection = new signalR.HubConnectionBuilder()
+        .withUrl("/Index")
+        .build();
+
+    hubConnection.on("GetMessage", function (username, text) {
+
+        var string = "<div class='message border border-primary rounded'>" +
+                        "<p>" + username + ": " + text + "</p>" +
+                        "</div > <br />";
+
+        $('.area-chat').append(string);
+        $('.area-chat').scrollTop(10000);
+    });
+
+    document.getElementById("send-but").addEventListener("click", function (e) {
+        var username = "@User.Identity.Name.ToString()";
+        var message = $('#input-area').val();
+        hubConnection.invoke("Broadcast", username, message);
+    });
+
+    hubConnection.start();
+
+</script>
