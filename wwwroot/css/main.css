@@ -1,4 +1,4 @@
-﻿body {
+body {
     display: grid;
     grid-template-areas: "header-1 header-1 header-1"
                          "left chat-list right" 
@@ -22,10 +22,10 @@ header{
 }
 
 .area-chat{
-    border: 1px solid black;
+    border: 1px solid #9911d7;
     grid-area: chat;
-    height: 500px;
-    overflow-y: auto;
+    grid-auto-flow: row;
+    border-radius: 5px;
 }
 
 .chat-list {
@@ -47,7 +47,5 @@ header{
 footer {
     grid-area: footer;
 }
-
-
 
 

@@ -13,12 +13,17 @@ namespace ChatASP.Controllers
 
     public class HomeController : Controller
     {
-        
+        private UserContext db;
+        public HomeController(UserContext context)
+        {
+            db = context;
+        }
+
         [Authorize]
         public IActionResult Index()
         {
-           
-            return View();
+            List<Message> msg = db.Messages.ToList();
+            return View(msg);
         }
 
         
